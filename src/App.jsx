@@ -1,8 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import { SpeedInsights } from "@vercel/speed-insights/react"
 
-inject();
 
 // Pages
 import Home from './pages/Home';
