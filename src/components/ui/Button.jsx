@@ -1,3 +1,5 @@
+import { FaFacebookF } from "react-icons/fa";
+
 export function Button({ children, variant = "primary", className = "", ...props }) {
   const baseClasses = "px-4 py-2 font-bold rounded cursor-pointer";
   const variants = {

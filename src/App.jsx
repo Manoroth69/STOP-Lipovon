@@ -1,27 +1,30 @@
-import { useState } from 'react'
-import React from 'react'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Risks from './components/Risks'
-import Prevent from './components/Prevent'
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+
+// Pages
+import Home from './pages/Home';
+import About from './components/About';
+import Risks from './components/Risks';
+import LipovonWarning from './components/LipovonWarning';
+import DonationSection from './components/DonationSection';
+import ReportHelpSection from './components/ReportHelpSection';
+// alte pagini...
 
 const App = () => {
   return (
-    <div className="app">
-       <Header/>
-       <main>
-        <Hero/>
-        <About/>
-         <Risks/>
-          <Prevent/>
-       </main>
-       
-      
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/despre" element={<About />} />
+        <Route path="/riscuri" element={<Risks />} />
+        <Route path="/protejeaza-te" element={<LipovonWarning />} />
+        <Route path="/donatii" element={<DonationSection />} />
+        <Route path="/ajutor" element={<ReportHelpSection />} />
+        {/* alte pagini */}
+      </Routes>
+    </>
+  );
+};
 
-    </div>
-   
-  )
-}
-
-export default App
+export default App;

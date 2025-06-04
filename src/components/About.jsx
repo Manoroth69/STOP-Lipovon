@@ -13,7 +13,7 @@ import {FaFacebook, FaInstagram, FaTiktok, FaTwitter} from "react-icons/fa";
 
 const About = () => {
   return (
-    <section className="about-bg w-full py-25 bg-blue-fade flex items-center justify-center px-4 ">
+    <section className="about-bg w-full h-screen py-25 bg-blue-fade flex items-center justify-center px-4 ">
          <div className="container">
          <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
    
@@ -24,7 +24,7 @@ const About = () => {
              </h2>
              
              <p className="  text-lg text-shadow-amber-50">
-               Suntem aici sa oferim informatii reale si verificate despre efectele produsului Lipovon si despre riscurile pe care le implica.
+              Suntem aici să oferim informații reale și verificate despre efectele produsului Lipovon și despre riscurile pe care le implică.
              </p>
              <div className="flex gap-4 pt-4">
                <a href="https:/facebook.com" target="_blank" rel="noopener noreferrer"className='social-icon  transition'>

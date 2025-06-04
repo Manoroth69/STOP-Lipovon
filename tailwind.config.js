@@ -23,7 +23,9 @@ module.exports = {
       },
     
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"),
+    require("tailwindcss-animate"),
+  ],
   daisyui: {
     themes: false, // no default themes, we use our own brand style
   },
