@@ -8,6 +8,7 @@ import Risks from './components/Risks';
 import LipovonWarning from './components/LipovonWarning';
 import DonationSection from './components/DonationSection';
 import ReportHelpSection from './components/ReportHelpSection';
+import Footer from './components/Footer';
 // alte pagini...
 
 const App = () => {
@@ -22,7 +23,9 @@ const App = () => {
         <Route path="/donatii" element={<DonationSection />} />
         <Route path="/ajutor" element={<ReportHelpSection />} />
         {/* alte pagini */}
+       
       </Routes>
+      <Footer />
     </>
   );
 };

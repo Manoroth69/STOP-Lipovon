@@ -1,9 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/Button';
-import HeroImg from '../assets/HeroImg.png';
+import HeroImg from '../assets/HeroImg.webp';
 import { FaChevronRight, FaFacebookF } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 
 const Hero = () => {
   const handleFacebookClick = () => {
@@ -25,15 +27,15 @@ const Hero = () => {
         {/* Open Graph */}
         <meta property="og:title" content="Lipovon – Pastila Care Poate Ucide" />
         <meta property="og:description" content="Descoperă riscurile reale ale produsului Lipovon. Informații verificate despre Sibutramină." />
-        <meta property="og:image" content="https://siteul-tau.ro/assets/hero-img.png" />
-        <meta property="og:url" content="https://siteul-tau.ro" />
+        <meta property="og:image" content="https://stoplipovon.com/src/assets/HeroImg.webp" />
+        <meta property="og:url" content="https://stoplipovon.com" />
         <meta property="og:type" content="website" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Lipovon – Avertisment Sănătate" />
         <meta name="twitter:description" content="Lipovon conține Sibutramină, o substanță interzisă. Informează-te!" />
-        <meta name="twitter:image" content="https://siteul-tau.ro/assets/hero-img.png" />
+        <meta name="twitter:image" content="https://stoplipovon.com/src/assets/HeroImg.webp" />
       </Helmet>
 
       <section aria-label="Avertisment despre pastila Lipovon"  className="w-full  flex justify-between items-center px-4">
@@ -74,14 +76,17 @@ const Hero = () => {
 
           {/* RIGHT */}
           <div className="relative w-full  flex items-center justify-end">
-            <img
-              src={HeroImg}
-              alt="Cutie Lipovon și avertisment despre Sibutramină"
-              loading="lazy"
-              width={450}
-              height={450}
-              className="z-10"
-            />
+            <motion.img
+  src={HeroImg}
+  alt="Cutie Lipovon și avertisment despre Sibutramină"
+  loading="lazy"
+  width={450}
+  height={450}
+  className="z-10"
+  initial={{ opacity: 0, y: 10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+/>
           </div>
         </div>
       </section>

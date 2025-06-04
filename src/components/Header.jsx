@@ -9,7 +9,7 @@ import {
   HeartHandshake,
   HelpCircle
 } from 'lucide-react';
-import Logo from '../assets/Logo.svg';
+import Logo from '../assets/Logo.png';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
 
@@ -32,7 +32,7 @@ export default function Header() {
     <header className="bg-blue-fade shadow-md fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <img src={Logo} alt="Stop Lipovon" className="h-10" />
+          <a href="/"><span className="text-red-900 text-lg font-semibold">STOP</span> <span className='text-sm'>LIPOVON</span></a>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-6">
@@ -46,7 +46,9 @@ export default function Header() {
                   }`
                 }
                 whileHover={{ scale: 1.05 }}
-                transition={{ type: 'spring', stiffness: 300 }}
+               
+                animate={label === 'Riscuri' ? { scale: [1, 1.1, 1], opacity: [1, 0.8, 1] } : {}}
+  transition={label === 'Riscuri' ? { duration: 1.5, repeat: Infinity, ease: 'easeInOut' } : {}}
               >
                 {icon}
                 <span>{label}</span>
