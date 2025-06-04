@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import { inject } from '@vercel/speed-insights';
+import { inject } from "@vercel/speed-insights"
 
 inject();
 
