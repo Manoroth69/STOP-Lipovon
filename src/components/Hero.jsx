@@ -16,7 +16,7 @@ const Hero = () => {
     <main role="main" className="bg-blue-fade w-full px-4 py-25 mt-10 relative text-white">
       {/* SEO Meta Tags */}
       <Helmet>
-        <title>Lipovon – Adevărul despre Sibutramină | STOP Lipovon</title>
+        <title>Lipovon – Cât de sigur este cu adevărat? | StopLipovon.com</title>
         <meta
           name="description"
           content="Află adevărul despre Lipovon – pastila ce conține Sibutramină, o substanță interzisă și periculoasă pentru sănătatea ta. Protejează-te!"
@@ -43,10 +43,8 @@ const Hero = () => {
           {/* LEFT */}
           <header className="space-y-6">
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-hero-title-primary">
-              <span className="text-muted">Lipovon:</span> Pastila Care Poate{" "}
-              <span className="text-highlight-dark relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#c849f8]">
-                Ucide
-              </span>
+              Lipovon – cât de sigur este  <span className="text-highlight-dark relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#c849f8]">cu adevărat?  </span>
+            
             </h1>
 
             <h2 className="text-xl sm:text-2xl font-semibold text-hero">
@@ -55,7 +53,7 @@ const Hero = () => {
 
             <p className="text-lg text-hero">
               Promovată ca supliment natural, Lipovon conține{" "}
-              <span className="text-highlight font-bold">Sibutramină</span> – o substanță interzisă în UE din 2010,
+              <a href="https://webgate.ec.europa.eu/rasff-window/screen/notification/540980" target="_blank" rel="noopener noreferrer" className="text-highlight font-bold underline">Sibutramină</a> – o substanță interzisă în UE din 2010,
               asociată cu infarct, AVC și depresie severă. Sibutramina nu ar trebui să se regăsească în nicio pastilă comercializată online.
             </p>
 

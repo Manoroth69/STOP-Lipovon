@@ -14,11 +14,11 @@ const Risks = () => {
           name="description"
           content="Află ce riști dacă folosești Lipovon: de la probleme cardiovasculare până la tulburări psihice. Informații despre sibutramină și efectele adverse."
         />
-        <link rel="canonical" href="https://stoplipovon.ro/riscuri" />
+        <link rel="canonical" href="https://stoplipovon.com/riscuri" />
         <meta property="og:title" content="Ce riști dacă folosești Lipovon?" />
         <meta property="og:description" content="Lipovon conține sibutramină, o substanță periculoasă care poate cauza infarct, AVC și probleme psihice grave." />
-        <meta property="og:url" content="https://stoplipovon.ro/riscuri" />
-        <meta property="og:image" content="https://stoplipovon.ro/assets/og-riscuri.jpg" />
+        <meta property="og:url" content="https://stoplipovon.com/riscuri" />
+        <meta property="og:image" content="https://stoplipovon.com/assets/og-riscuri.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
@@ -51,11 +51,8 @@ const Risks = () => {
             <p>
               Lipovon este un produs comercializat online ca supliment pentru slăbit rapid. În multe cazuri, conține <strong>Sibutramină</strong> — o substanță interzisă în Uniunea Europeană din 2010 din cauza riscurilor majore pentru inimă și creier.
             </p>
-            <ul className="list-disc list-inside text-left space-y-2">
-              <li>O femeie din București a ajuns la urgențe cu tahicardie după doar 10 zile de administrare.</li>
-              <li>În Bulgaria, un lot de Lipovon a fost retras după ce s-a confirmat prezența Sibutraminei.</li>
-              <li>Pe forumuri românești, utilizatoarele reclamă efecte ca insomnie, anxietate și pierderi de memorie.</li>
-            </ul>
+            
+            
           </div>
 
           {/* Introducere la carduri */}
@@ -79,11 +76,47 @@ const Risks = () => {
               Ne poți scrie anonim. Vrem să documentăm cât mai clar impactul acestor produse și să ajutăm la prevenirea altor cazuri.
             </p>
             <Link to="/donatii">
-              <Button variant="tertiary" className="flex items-center gap-2">
+              <Button variant="tertiary" className="flex items-center gap-2 mt-5">
                 Trimite-ne un mesaj!
               </Button>
             </Link>
+
+            <h2 className="text-base font-semibold text-black mb-2 mt-5">📚 Surse și referințe</h2>
+  <ul className="list-disc list-inside space-y-1">
+    <li>
+      <a
+        href="https://adevarul.ro/stiri-interne/societate/pastila-de-slabit-interzisa-in-ue-noua-senzatie-2446823.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-black hover:underline"
+      >
+        Adevărul – Pastila de slăbit interzisă în UE, dar vândută online
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://recorder.ro/noua-senzatie-de-pe-tiktok-lipovon-pastila-de-slabit-cu-risc-de-moarte-subita/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-black hover:underline"
+      >
+        Recorder – Lipovon, pastila promovată pe TikTok care poate duce la moarte subită
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://www.tiktok.com/@recorder.ro/video/7509475880343833878"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-black hover:underline"
+      >
+        TikTok – Reportaj video despre Lipovon
+      </a>
+    </li>
+  </ul>
           </div>
+
+          
         </div>
       </section>
     </>

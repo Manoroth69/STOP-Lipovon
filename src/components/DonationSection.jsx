@@ -17,8 +17,8 @@ const DonationSection = () => {
         <link rel="canonical" href="https://stoplipovon.ro/donatii" />
         <meta property="og:title" content="Donează pentru o informare corectă" />
         <meta property="og:description" content="Susține misiunea StopLipovon cu o donație. Ajută-ne să salvăm vieți și să educăm publicul!" />
-        <meta property="og:url" content="https://stoplipovon.ro/donatii" />
-        <meta property="og:image" content="https://stoplipovon.ro/assets/og-donatii.jpg" />
+        <meta property="og:url" content="https://stoplipovon.com/donatii" />
+        <meta property="og:image" content="https://stoplipovon.com/assets/og-donatii.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
@@ -44,7 +44,7 @@ const DonationSection = () => {
               <h1 className="text-4xl font-bold text-white mb-4">Susține Misiunea Noastră</h1>
               <p className="text-lg text-white ">
                 Ajută-ne să informăm corect și să protejăm comunitatea. Orice donație contează și sprijină eforturile noastre
-                împotriva produselor periculoase.
+                împotriva produselor periculoase. Dacă vrei să ne susții în această campanie de informare, poți dona prin metode sigure. Mulțumim!
               </p>
             </header>
 
@@ -83,6 +83,10 @@ const DonationSection = () => {
                     Donează cu Revolut
                   </a>
                 </li>
+                <p className="text-xs text-gray-100 mt-4 max-w-xl">
+  Donațiile sunt 100% voluntare și nu presupun niciun schimb de bunuri sau servicii. Sumele colectate sunt folosite exclusiv pentru susținerea proiectului StopLipovon – mentenanță, hosting și dezvoltare de conținut informativ. 
+  Nu păstrăm datele tale bancare, iar procesarea este realizată de platformele respective (Stripe, PayPal, Revolut).
+</p>
               </ul>
             </nav>
           </div>
@@ -135,7 +139,11 @@ const DonationSection = () => {
               >
                 Trimite Mesajul
               </button>
+              <p className="text-xs text-gray-900 mt-2">
+  Prin trimiterea acestui mesaj, sunteți de acord ca datele transmise să fie utilizate exclusiv pentru a vă răspunde. Nu stocăm și nu transmitem informațiile către terți.
+</p>
             </form>
+            
           </div>
         </div>
       </section>

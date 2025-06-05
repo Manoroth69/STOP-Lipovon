@@ -5,24 +5,24 @@ const Footer = () => {
   return (
     <>
       <Helmet>
-        {/* Date generale */}
-        <meta name="author" content="Echipa Anti-Lipovon" />
-        <meta name="copyright" content="© 2025 Anti-Lipovon" />
-        <meta name="robots" content="index, follow" />
-        <meta name="language" content="ro" />
-        <meta name="geo.region" content="RO" />
-        <meta name="geo.placename" content="România" />
+        {/* SEO META */}
+        <meta name="author" content="Proiect StopLipovon" />
+        <meta name="copyright" content="© 2025 StopLipovon" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
 
-        {/* Structured Data (JSON-LD) - ORGANIZATION + FOOTER INFO */}
+        {/* JSON-LD STRUCTURED DATA */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Anti-Lipovon",
-            "url": "https://anti-lipovon.ro",
+            "name": "StopLipovon",
+            "url": "https://stoplipovon.com",
             "description":
-              "Informații reale despre produsul Lipovon – Avertismente, riscuri și protecție pentru consumatori.",
-            "sameAs": [],
+              "Campanie informativă despre pericolele reale ale pastilei Lipovon. Protejează-ți sănătatea cu informații verificate.",
+            "sameAs": [
+              "https://facebook.com/stoplipovon",
+              "https://instagram.com/stoplipovon"
+            ],
             "address": {
               "@type": "PostalAddress",
               "addressCountry": "RO"
@@ -45,9 +45,7 @@ const Footer = () => {
               Informații reale. Protecție reală.
             </p>
             <p className="mt-4 text-slate-400 leading-relaxed max-w-sm">
-              Informațiile prezentate pe acest site sunt pentru scop informativ
-              și educațional. Nu înlocuiesc sfatul medical. Consultă întotdeauna
-              un medic specialist.
+              Informațiile prezentate pe acest site au scop informativ și educativ. Nu oferim sfaturi medicale. Consultă întotdeauna un medic specialist.
             </p>
           </div>
 
@@ -61,11 +59,18 @@ const Footer = () => {
               <li><a href="/despre" className="hover:text-white transition">Ce este Lipovon?</a></li>
               <li><a href="/riscuri" className="hover:text-white transition">Riscuri</a></li>
               <li><a href="/protejeaza-te" className="hover:text-white transition">Protejează-te</a></li>
-                <li><a href="/ajutor" className="hover:text-white transition">Autor</a></li>
+              <li><a href="/ajutor" className="hover:text-white transition">Autor</a></li>
               <li><a href="/donatii" className="hover:text-white transition">Contact / Donații</a></li>
-            
+              {/* 🔒 Legal */}
+              <li><a href="/disclaimer" className="hover:text-white transition">Disclaimer</a></li>
+              <li><a href="/confidentialitate" className="hover:text-white transition">Politica de Confidențialitate</a></li>
+              <li><a href="/termeni" className="hover:text-white transition">Termeni și Condiții</a></li>
+              <li>
+  <a href="/cookies" className="hover:text-white transition">
+    Politica de cookie-uri
+  </a>
+</li>
             </ul>
-           
           </nav>
         </div>
 
@@ -78,4 +83,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

@@ -10,6 +10,11 @@ import LipovonWarning from './components/LipovonWarning';
 import DonationSection from './components/DonationSection';
 import ReportHelpSection from './components/ReportHelpSection';
 import Footer from './components/Footer';
+import Confidentialitate from './components/Confidentialitate';
+import Termeni from './components/Termeni';
+import Disclaimer from './components/Disclaimer';
+import CookieConsent from "./components/CookieConsent";
+import PoliticaCookies from './components/PoliticaCookies';
 // alte pagini...
 
 const App = () => {
@@ -23,10 +28,16 @@ const App = () => {
         <Route path="/protejeaza-te" element={<LipovonWarning />} />
         <Route path="/donatii" element={<DonationSection />} />
         <Route path="/ajutor" element={<ReportHelpSection />} />
+        <Route path="/confidentialitate" element={<Confidentialitate />} />
+        <Route path="/termeni" element={<Termeni />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="/cookies" element={<PoliticaCookies />} />
+        
         {/* alte pagini */}
        
       </Routes>
       <Footer />
+      <CookieConsent />
     </>
   );
 };
