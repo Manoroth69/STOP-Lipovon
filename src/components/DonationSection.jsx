@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async"; // pentru meta SEO
 import { SiStripe } from "react-icons/si";
 import { FaPaypal } from "react-icons/fa";
 import { SiRevolut } from "react-icons/si";
+import { BiCoffee } from "react-icons/bi";
 import ContactForm from './ContactForm';
 
 const DonationSection = () => {
@@ -10,7 +11,7 @@ const DonationSection = () => {
     <>
       {/* 🔍 SEO Metadata */}
       <Helmet>
-        <title>Donează pentru o informare corectă | StopLipovon</title>
+        <title>Stop Lipovon – Adevărul despre acest „supliment”</title>
         <meta
           name="description"
           content="Sprijină StopLipovon în lupta împotriva dezinformării și a produselor periculoase. Donează prin Stripe, PayPal sau Revolut. Împreună protejăm comunitatea!"
@@ -76,12 +77,12 @@ const DonationSection = () => {
                 </li>
                 <li>
                   <a
-                    href="https://revolut.me/donatie"
+                    href="https://buymeacoffee.com/stoplipovon"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 bg-teal-600 hover:bg-teal-700 text-black font-medium px-6 py-3 rounded-xl shadow-lg transform hover:scale-105 transition"
+                    className="flex items-center gap-3 bg-[#FFDD00]  text-black font-medium px-6 py-3 rounded-xl shadow-lg transform hover:scale-105 transition"
                   >
-                     <SiRevolut title="Revolut" className="" />
+                     <BiCoffee title="Buy Me A Coffee" className="" />
                     Cumpara-mi o cafea!
                   </a>
                 </li>
