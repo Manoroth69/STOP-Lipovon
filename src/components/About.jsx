@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/Button';
 import {
@@ -19,7 +19,7 @@ const About = () => {
           content="Află ce este StopLipovon – o campanie de informare despre riscurile grave ale pastilei Lipovon și despre prezența sibutraminei. Protejează-ți sănătatea!"
         />
         <link rel="canonical" href="https://stoplipovon.com/despre" />
-        
+
         {/* Open Graph */}
         <meta property="og:title" content="Ce este StopLipovon?" />
         <meta property="og:description" content="Informații reale despre riscurile pastilei Lipovon și despre campania StopLipovon. Protejează-te!" />
@@ -27,14 +27,16 @@ const About = () => {
         <meta property="og:url" content="https://stoplipovon.com/despre" />
         <meta property="og:image" content="https://stoplipovon.com/assets/og-image.jpg" />
         <meta property="og:image:alt" content="Sigla StopLipovon și mesajul de avertizare" />
+        <meta property="article:published_time" content="2024-06-01T12:00:00Z" />
+        <meta property="article:author" content="StopLipovon" />
 
-        {/* Twitter card */}
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Ce este StopLipovon?" />
         <meta name="twitter:description" content="Campanie de informare despre riscurile reale ale pastilei Lipovon. Află ce conține și de ce e periculos." />
         <meta name="twitter:image" content="https://stoplipovon.com/assets/og-image.jpg" />
 
-        {/* Structured data: Organization schema */}
+        {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -43,17 +45,17 @@ const About = () => {
             "url": "https://stoplipovon.com",
             "logo": "https://stoplipovon.com/assets/logo.png",
             "sameAs": [
-              "https://facebook.com",
-              "https://instagram.com",
-              "https://tiktok.com",
-              "https://twitter.com"
+              "https://facebook.com/stoplipovon",
+              "https://instagram.com/stoplipovon",
+              "https://tiktok.com/@stoplipovon",
+              "https://twitter.com/stoplipovon"
             ],
-            "description": "Campanie de informare despre pericolele pastilei Lipovon și promovarea sănătății prin surse sigure.",
+            "description": "Campanie de informare despre pericolele pastilei Lipovon și promovarea sănătății prin surse sigure."
           })}
         </script>
       </Helmet>
 
-      {/* Content Section */}
+      {/* Main Content */}
       <section
         aria-label="Despre campania StopLipovon"
         className="about-bg w-full py-30 bg-blue-fade flex items-center justify-center px-4"
@@ -67,26 +69,26 @@ const About = () => {
               </h1>
 
               <p className="text-lg text-shadow-amber-50">
-                Suntem o inițiativă anonimă, fără legături comerciale, care documentează efectele reale ale Lipovon și pericolele marketingului înșelător.
+                Suntem o inițiativă de informare publică, fără scop comercial, care documentează efectele reale ale pastilei Lipovon și pericolele marketingului înșelător.
               </p>
 
               <div className="flex gap-4 pt-4" aria-label="Rețele sociale StopLipovon">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <a href="https://facebook.com/stoplipovon" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <FaFacebook className="w-6 h-6" />
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <a href="https://instagram.com/stoplipovon" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                   <FaInstagram className="w-6 h-6" />
                 </a>
-                <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <a href="https://tiktok.com/@stoplipovon" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
                   <FaTiktok className="w-6 h-6" />
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <a href="https://twitter.com/stoplipovon" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                   <FaTwitter className="w-6 h-6" />
                 </a>
               </div>
             </div>
 
-            {/* RIGHT COLUMN */}
+            {/* RIGHT COLUMN - Accordion */}
             <Accordion
               type="single"
               collapsible

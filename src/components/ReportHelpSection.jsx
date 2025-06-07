@@ -11,11 +11,11 @@ const ReportHelpSection = () => {
           name="description"
           content="Ai luat Lipovon sau un alt produs periculos? Află cum poți să-l raportezi autorităților și să ceri ajutor. Informații utile de la StopLipovon."
         />
-        <link rel="canonical" href="https://stoplipovon.ro/raporteaza" />
+        <link rel="canonical" href="https://stoplipovon.com/ajutor" />
         <meta property="og:title" content="Raportează produsul Lipovon" />
         <meta property="og:description" content="Ghid rapid pentru raportare și instituții utile în caz de probleme cauzate de Lipovon sau produse similare." />
-        <meta property="og:url" content="https://stoplipovon.ro/raporteaza" />
-        <meta property="og:image" content="https://stoplipovon.ro/assets/og-raportare.jpg" />
+        <meta property="og:url" content="https://stoplipovon.com/ajutor" />
+        <meta property="og:image" content="https://stoplipovon.com/assets/og-raportare.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 

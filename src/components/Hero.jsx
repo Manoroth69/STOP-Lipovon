@@ -6,28 +6,27 @@ import { FaChevronRight, FaFacebookF } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-
 const Hero = () => {
   const handleFacebookClick = () => {
-    window.open("https://www.facebook.com/pagina.ta", "_blank");
+    window.open("https://www.facebook.com/sharer/sharer.php?u=https://stoplipovon.ro", "_blank");
   };
 
   return (
     <main role="main" className="bg-blue-fade w-full px-4 py-25 mt-10 relative text-white">
-      {/* SEO Meta Tags */}
       <Helmet>
-        <title>Lipovon – Cât de sigur este cu adevărat? | StopLipovon.com</title>
+        <title>Lipovon – Cât de sigur este cu adevărat? | StopLipovon.ro</title>
         <meta
           name="description"
           content="Află adevărul despre Lipovon – pastila ce conține Sibutramină, o substanță interzisă și periculoasă pentru sănătatea ta. Protejează-te!"
         />
         <meta name="keywords" content="Lipovon, Sibutramină, pastile periculoase, suplimente, sănătate, riscuri" />
         <meta name="author" content="STOP Lipovon" />
+        <link rel="canonical" href="https://stoplipovon.com" />
 
         {/* Open Graph */}
         <meta property="og:title" content="Lipovon – Pastila Care Poate Ucide" />
         <meta property="og:description" content="Descoperă riscurile reale ale produsului Lipovon. Informații verificate despre Sibutramină." />
-        <meta property="og:image" content="https://stoplipovon.com/src/assets/HeroImg.webp" />
+        <meta property="og:image" content="https://stoplipovon.com/assets/HeroImg.webp" />
         <meta property="og:url" content="https://stoplipovon.com" />
         <meta property="og:type" content="website" />
 
@@ -35,16 +34,29 @@ const Hero = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Lipovon – Avertisment Sănătate" />
         <meta name="twitter:description" content="Lipovon conține Sibutramină, o substanță interzisă. Informează-te!" />
-        <meta name="twitter:image" content="https://stoplipovon.com/src/assets/HeroImg.webp" />
+        <meta name="twitter:image" content="https://stoplipovon.com/assets/HeroImg.webp" />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Lipovon – Cât de sigur este cu adevărat?",
+            "url": "https://stoplipovon.com",
+            "description": "Află adevărul despre Lipovon – pastila ce conține Sibutramină, o substanță interzisă.",
+            "author": {
+              "@type": "Organization",
+              "name": "STOP Lipovon"
+            }
+          })}
+        </script>
       </Helmet>
 
-      <section aria-label="Avertisment despre pastila Lipovon"  className="w-full  flex justify-between items-center px-4">
+      <section aria-label="Avertisment despre pastila Lipovon" className="w-full flex justify-between items-center px-4">
         <div className="container mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center justify-center">
-          {/* LEFT */}
           <header className="space-y-6">
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-hero-title-primary">
-              Lipovon – cât de sigur este  <span className="text-highlight-dark relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#c849f8]">cu adevărat?  </span>
-            
+              Lipovon – cât de sigur este <span className="text-highlight-dark relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:bg-[#c849f8]">cu adevărat?</span>
             </h1>
 
             <h2 className="text-xl sm:text-2xl font-semibold text-hero">
@@ -70,21 +82,24 @@ const Hero = () => {
                 Distribuie
               </Button>
             </div>
+
+            <p className="text-xs text-hero mt-4">
+              *Acest site are scop informativ și nu substituie sfatul unui medic autorizat. Consultați un specialist înainte de a lua decizii legate de sănătate. Nu suntem afiliați cu distribuitorii sau producătorii Lipovon.
+            </p>
           </header>
 
-          {/* RIGHT */}
-          <div className="relative w-full  flex items-center justify-end">
+          <div className="relative w-full flex items-center justify-end">
             <motion.img
-  src={HeroImg}
-  alt="Cutie Lipovon și avertisment despre Sibutramină"
-  loading="lazy"
-  width={450}
-  height={450}
-  className="z-10"
-  initial={{ opacity: 0, y: 10 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
-/>
+              src={HeroImg}
+              alt="Cutie Lipovon și avertisment despre Sibutramină"
+              loading="lazy"
+              width={450}
+              height={450}
+              className="z-10"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            />
           </div>
         </div>
       </section>

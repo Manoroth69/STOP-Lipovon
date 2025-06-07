@@ -14,7 +14,7 @@ const DonationSection = () => {
           name="description"
           content="Sprijină StopLipovon în lupta împotriva dezinformării și a produselor periculoase. Donează prin Stripe, PayPal sau Revolut. Împreună protejăm comunitatea!"
         />
-        <link rel="canonical" href="https://stoplipovon.ro/donatii" />
+        <link rel="canonical" href="https://stoplipovon.com/donatii" />
         <meta property="og:title" content="Donează pentru o informare corectă" />
         <meta property="og:description" content="Susține misiunea StopLipovon cu o donație. Ajută-ne să salvăm vieți și să educăm publicul!" />
         <meta property="og:url" content="https://stoplipovon.com/donatii" />
