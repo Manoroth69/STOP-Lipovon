@@ -60,7 +60,7 @@ const About = () => {
         aria-label="Despre campania StopLipovon"
         className="about-bg w-full py-30 bg-blue-fade flex items-center justify-center px-4"
       >
-        <div className="container">
+        <div className="container flex items-center justify-center">
           <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* LEFT COLUMN */}
             <div className="text-white space-y-6">
