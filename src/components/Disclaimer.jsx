@@ -11,7 +11,7 @@ const Disclaimer = () => {
       <section className="max-w-3xl mx-auto py-30 px-4 text-gray-800">
         <h1 className="text-3xl font-bold mb-4">Disclaimer</h1>
         <p className="mb-4">
-          StopLipovon.ro este un proiect informativ, creat cu scopul de a semnala riscurile potențiale asociate suplimentelor alimentare promovate agresiv pe internet, în special produsul Lipovon.
+          StopLipovon.com este un proiect informativ, creat cu scopul de a semnala riscurile potențiale asociate suplimentelor alimentare promovate agresiv pe internet, în special produsul Lipovon.
         </p>
         <p className="mb-4">
           Nu avem nicio legătură cu producătorii sau distribuitorii produsului Lipovon. Informațiile prezentate sunt bazate pe surse publice, comunicate oficiale și materiale jurnalistice independente.

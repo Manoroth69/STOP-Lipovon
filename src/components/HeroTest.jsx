@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/Button';
 
 const MotionA = motion.create('a');
 
-export const Hero = () => {
+export const HeroTest = () => {
   // You can remove isVisible state as framer-motion handles animations now
   // const [isVisible, setIsVisible] = useState(false);
 
@@ -97,7 +97,7 @@ export const Hero = () => {
               </div>
 
               <div className="flex sm:flex-row gap-4">
-                <Button variant="primary" className="flex items-center justify-center bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                <Button className="flex items-center justify-center bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                   <span className="flex items-center space-x-2">
                     <span>Află Riscurile</span>
                     <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform duration-300">
@@ -106,7 +106,7 @@ export const Hero = () => {
                   </span>
                 </Button>
 
-                <Button variant="secondary" className="flex items-center justify-center space-x-2 bg-white  px-6 py-3 rounded-xl font-semibold border border-blue-200 hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 hover:shadow-lg">
+                <Button className="flex items-center justify-center space-x-2 bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold border border-blue-200 hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 hover:shadow-lg">
                   <Share2 className="w-5 h-5" />
                   <span>Distribuie </span>
                 </Button>
@@ -190,4 +190,4 @@ export const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroTest;
