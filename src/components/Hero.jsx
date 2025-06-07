@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { AlertTriangle, AlertCircle, Info, CheckCircle, HelpCircle, Share2 } from "lucide-react";
 import { FloatingPills } from "./FloatingPills";
 import { ParticleBackground } from "./ParticleBackground";
-import pill2 from '../assets/pill2.png';
+import pill from '../assets/pill.png';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
 import { Helmet } from 'react-helmet-async';
@@ -67,8 +67,8 @@ export const Hero = () => {
           property="og:description"
           content="Lipovon conține sibutramină – o substanță periculoasă interzisă. Află care sunt riscurile și cum să te protejezi."
         />
-        <meta property="og:image" content="https://stoplipovon.ro/og-image.jpg" />
-        <meta property="og:url" content="https://stoplipovon.ro/" />
+        <meta property="og:image" content="https://stoplipovon.com/og-image.jpg" />
+        <meta property="og:url" content="https://stoplipovon.com/" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -77,8 +77,8 @@ export const Hero = () => {
           name="twitter:description"
           content="Lipovon conține sibutramină – interzisă din 2010. Află de ce e periculoasă."
         />
-        <meta name="twitter:image" content="https://stoplipovon.ro/og-image.jpg" />
-        <link rel="canonical" href="https://stoplipovon.ro/" />
+        <meta name="twitter:image" content="https://stoplipovon.com/og-image.jpg" />
+        <link rel="canonical" href="https://stoplipovon.com/" />
       </Helmet>
 
       <div className="container">
@@ -123,7 +123,7 @@ export const Hero = () => {
                   <Link to="/riscuri">
                     <Button
                       variant="primary"
-                      className="flex items-center justify-center bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                      className="flex items-center justify-center  bg-blue-600/90 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
                     >
                       <span className="flex items-center space-x-2">
                         <span>Află Riscurile</span>
@@ -162,7 +162,7 @@ export const Hero = () => {
                     transition={{ type: 'spring', stiffness: 300 }}
                   >
                     <img
-                      src={pill2}
+                      src={pill}
                       alt="Cutie Lipovon și avertisment despre Sibutramină"
                       loading="lazy"
                       width={400}

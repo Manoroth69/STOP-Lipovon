@@ -15,7 +15,7 @@ import Termeni from './components/Termeni';
 import Disclaimer from './components/Disclaimer';
 import CookieConsent from "./components/CookieConsent";
 import PoliticaCookies from './components/PoliticaCookies';
-import HeroTest from './components/HeroTest';
+
 // alte pagini...
 
 const App = () => {
@@ -38,7 +38,6 @@ const App = () => {
        
       </Routes>
       <Footer />
-      <HeroTest/>
       <CookieConsent />
     </>
   );
