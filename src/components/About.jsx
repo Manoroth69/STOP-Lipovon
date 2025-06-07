@@ -92,7 +92,7 @@ const About = () => {
             <Accordion
               type="single"
               collapsible
-              className="w-full h-full max-w-md flex flex-col justify-start text-white font-semibold"
+              className="w-full h-full max-w-md flex flex-col justify-end text-white font-semibold"
             >
               <AccordionItem value="item-1">
                 <AccordionTrigger>Ce este Lipovon?</AccordionTrigger>
