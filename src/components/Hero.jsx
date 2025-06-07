@@ -56,6 +56,7 @@ export const Hero = () => {
 
   return (
     <section className="relative flex items-center justify-center overflow-hidden py-30">
+      <div className="container mx-auto px-4">
       <Helmet>
         <title>Stop Lipovon – Adevărul despre acest „supliment”</title>
         <meta
@@ -125,7 +126,7 @@ export const Hero = () => {
                       variant="primary"
                       className="flex items-center justify-center  bg-blue-600/90 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
                     >
-                      <span className="flex items-center space-x-2">
+                      <span className="flex items-center justify-center space-x-2">
                         <span>Află Riscurile</span>
                         <div className="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform duration-300">
                           <span className="text-xs">→</span>
@@ -215,6 +216,7 @@ export const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
