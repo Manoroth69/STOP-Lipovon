@@ -12,7 +12,7 @@ const Termeni = () => {
         <h1 className="text-3xl font-bold mb-6">Termeni și Condiții</h1>
 
         <p className="mb-4">
-          Prin utilizarea site-ului StopLipovon.ro, sunteți de acord cu termenii și condițiile prezentate mai jos:
+          Prin utilizarea site-ului StopLipovon.com, sunteți de acord cu termenii și condițiile prezentate mai jos:
         </p>
 
         <ol className="list-decimal pl-6 space-y-4">
