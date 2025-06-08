@@ -113,7 +113,6 @@ const Risks = () => {
               Ne poți scrie anonim. Vrem să documentăm cât mai clar impactul acestor produse și să ajutăm la prevenirea altor cazuri.
             </p>
             
-
             <h2 className="text-base font-semibold text-black mb-2 mt-5">📚 Surse și referințe</h2>
             <ul className="list-disc list-inside space-y-1">
               <li>
