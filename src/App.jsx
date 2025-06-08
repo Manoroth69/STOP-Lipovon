@@ -16,6 +16,7 @@ import Disclaimer from './components/Disclaimer';
 import CookieConsent from "./components/CookieConsent";
 import PoliticaCookies from './components/PoliticaCookies';
 
+
 // alte pagini...
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
         {/* alte pagini */}
        
       </Routes>
+      
       <Footer />
       <CookieConsent />
     </>

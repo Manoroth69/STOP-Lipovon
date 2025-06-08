@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { AlertTriangle, AlertCircle, Info, CheckCircle, HelpCircle, Share2 } from "lucide-react";
 import { FloatingPills } from "./FloatingPills";
 import { ParticleBackground } from "./ParticleBackground";
-import pill from '../assets/pill.png';
+import pill from '../assets/pill.webp';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
 import { Helmet } from 'react-helmet-async';

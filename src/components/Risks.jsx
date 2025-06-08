@@ -63,7 +63,7 @@ const Risks = () => {
 
       <section
         aria-label="Riscurile folosirii Lipovon"
-        className="risks-bg w-full py-30 px-4"
+        className="risks-bg w-full py-30 px-4 z-30"
       >
         <div className="container mx-auto flex flex-col items-center space-y-20">
           {/* Header */}
@@ -112,11 +112,7 @@ const Risks = () => {
             <p className="text-sm italic">
               Ne poți scrie anonim. Vrem să documentăm cât mai clar impactul acestor produse și să ajutăm la prevenirea altor cazuri.
             </p>
-            <Link to="/donatii">
-              <Button variant="tertiary" className="flex items-center gap-2 mt-5">
-                Trimite-ne un mesaj!
-              </Button>
-            </Link>
+            
 
             <h2 className="text-base font-semibold text-black mb-2 mt-5">📚 Surse și referințe</h2>
             <ul className="list-disc list-inside space-y-1">

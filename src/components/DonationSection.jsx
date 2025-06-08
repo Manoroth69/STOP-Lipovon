@@ -4,7 +4,8 @@ import { SiStripe } from "react-icons/si";
 import { FaPaypal } from "react-icons/fa";
 import { SiRevolut } from "react-icons/si";
 import { BiCoffee } from "react-icons/bi";
-import ContactForm from './ContactForm';
+import Coffee from "../assets/Coffee.webp";
+
 
 const DonationSection = () => {
   return (
@@ -96,8 +97,8 @@ const DonationSection = () => {
 
           {/* Col Dreapta */}
           <div className="bg-[#FFF3E0] rounded-3xl shadow-xl p-8 animate-fade-in-up delay-200">
-            <h2 className="text-2xl font-semibold mb-4">Ai întrebări? Trimite-ne un mesaj!</h2>
-            <ContactForm></ContactForm>
+           <img src={Coffee} alt="Buy me a coffee image" loading="lazy"/>
+           
             
           </div>
         </div>

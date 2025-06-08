@@ -6,7 +6,7 @@ import {
   HelpCircle,
   FileText,
   Shield,
-  Phone,
+  HandCoins,
   Settings,
   X,
 } from "lucide-react";
@@ -30,8 +30,9 @@ export const Header = () => {
     { icon: HelpCircle, label: "Ce este Lipovon?", to: "/despre" },
     { icon: FileText, label: "Riscuri", to: "/riscuri" },
     { icon: Shield, label: "Protejează-te", to: "/protejeaza-te" },
-    { icon: Phone, label: "Contact / Donații", to: "/donatii" },
-    { icon: Settings, label: "Ajutor", to: "/ajutor" },
+     { icon: Settings, label: "Ajutor", to: "/ajutor" },
+    { icon: HandCoins, label: "Donații", to: "/donatii" },
+   
   ];
 
   return (
