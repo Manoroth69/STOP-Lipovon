@@ -12,7 +12,7 @@ const PoliticaCookies = () => {
       <h1 className="text-3xl font-bold mb-6">Politica de Cookie-uri</h1>
 
       <p className="mb-4">
-        Site-ul <strong>StopLipovon.ro</strong> folosește module cookie pentru a
+        Site-ul <strong>StopLipovon.com</strong> folosește module cookie pentru a
         oferi o experiență personalizată, pentru a analiza traficul și pentru
         a afișa reclame relevante (de exemplu, prin Google AdSense). Continuarea
         utilizării site-ului implică acceptul dvs. pentru folosirea cookie-urilor,
