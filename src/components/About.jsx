@@ -56,7 +56,7 @@ const About = () => {
       {/* Main Content */}
       <div className="relative z-0">
         {/* Hero */}
-        <section className="container mx-auto px-4 py-30 flex items-center">
+        <section className="container mx-auto flex items-center justify-center overflow-hidden py-30">
          
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
