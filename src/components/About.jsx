@@ -201,13 +201,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* Bottom Overlay */}
-        <motion.div 
-          className="absolute bottom-0 z-[-1] left-0 right-0 h-32 bg-gradient-to-t from-orange-400/20 to-transparent"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-        />
+        
       </div>
     </div>
   );
