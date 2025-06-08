@@ -2,7 +2,6 @@ import { Helmet } from 'react-helmet-async';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { SiTiktok } from 'react-icons/si';
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
-import FloatingShapes from '@/components/FloatingShapes';
 import AnimatedSection from '@/components/AnimatedSection';
 import SparkleEffect from '@/components/SparkleEffect';
 import Header from '@/components/Header';
@@ -39,25 +38,26 @@ const About = () => {
       </Helmet>
 
       {/* Floating Background */}
-      <FloatingShapes />
+      
 
       {/* Parallax Layer */}
       <motion.div 
-        className="absolute inset-0 opacity-20 z-0"
+        className="absolute inset-0 opacity-20"
         style={{ y: backgroundY }}
       >
         {/* Animated floating shapes */}
-        <div className="absolute z-0 top-20 left-10 w-32 h-32 bg-blue-400/10 rounded-full blur-xl animate-float-slow" />
-        <div className="absolute z-0  top-40 right-20 w-24 h-24 bg-purple-400/15 rounded-full blur-lg animate-float-medium" />
-        <div className="absolute z-0  bottom-32 left-1/3 w-40 h-40 bg-indigo-400/8 rounded-full blur-2xl animate-float-fast" />
+        <div className="absolute  top-20 left-10 w-32 h-32 bg-blue-400/10 rounded-full blur-xl animate-float-slow" />
+        <div className="absolute  top-40 right-20 w-24 h-24 bg-purple-400/15 rounded-full blur-lg animate-float-medium" />
+        <div className="absolute   bottom-32 left-1/3 w-40 h-40 bg-indigo-400/8 rounded-full blur-2xl animate-float-fast" />
       </motion.div>
 
      
 
       {/* Main Content */}
-      <div className="relative z-10">
+      <div className="relative z-0">
         {/* Hero */}
-        <section className="container mx-auto px-4 py-30">
+        <section className="container mx-auto px-4 py-30 flex items-center">
+         
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <AnimatedSection delay={0.2}>
