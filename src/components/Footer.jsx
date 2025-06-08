@@ -59,8 +59,8 @@ const Footer = () => {
               <li><a href="/despre" className="hover:text-white transition">Ce este Lipovon?</a></li>
               <li><a href="/riscuri" className="hover:text-white transition">Riscuri</a></li>
               <li><a href="/protejeaza-te" className="hover:text-white transition">Protejează-te</a></li>
-              <li><a href="/ajutor" className="hover:text-white transition">Autor</a></li>
-              <li><a href="/donatii" className="hover:text-white transition">Contact / Donații</a></li>
+              <li><a href="/ajutor" className="hover:text-white transition">Ajutor</a></li>
+              <li><a href="/donatii" className="hover:text-white transition">Donații</a></li>
               {/* 🔒 Legal */}
               <li><a href="/disclaimer" className="hover:text-white transition">Disclaimer</a></li>
               <li><a href="/confidentialitate" className="hover:text-white transition">Politica de Confidențialitate</a></li>
@@ -70,6 +70,7 @@ const Footer = () => {
     Politica de cookie-uri
   </a>
 </li>
+<li><a href="/autor" className="hover:text-white transition">Autor</a></li>
             </ul>
           </nav>
         </div>

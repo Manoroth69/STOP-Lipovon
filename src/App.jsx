@@ -15,6 +15,7 @@ import Termeni from './components/Termeni';
 import Disclaimer from './components/Disclaimer';
 import CookieConsent from "./components/CookieConsent";
 import PoliticaCookies from './components/PoliticaCookies';
+import Author from './components/Author';
 
 
 // alte pagini...
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/termeni" element={<Termeni />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="/cookies" element={<PoliticaCookies />} />
+        <Route path="/autor" element={<Author />} />
         
         {/* alte pagini */}
        
