@@ -102,7 +102,7 @@ export const Hero = () => {
               >
                 <h1 className="text-4xl lg:text-5xl font-bold text-slate-800 leading-tight">
                   <span className="bg-gradient-to-r from-slate-800 via-blue-800 to-purple-800 bg-clip-text text-transparent">
-                    Lipovon
+                    LipovonTest
                   </span>{" "}
                   <span className="text-slate-700">– cât de sigur este cu adevărat?</span>
                 </h1>
