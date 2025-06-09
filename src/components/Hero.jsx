@@ -55,7 +55,7 @@ export const Hero = () => {
   ];
 
   return (
-    <section className="relative flex items-center justify-center overflow-hidden py-30">
+    <section className="relative flex items-center justify-center overflow-hidden min-h-screen">
       <div className="container mx-auto px-4">
       <Helmet>
         <title>Stop Lipovon – Adevărul despre acest „supliment”</title>
