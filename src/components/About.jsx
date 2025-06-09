@@ -75,7 +75,7 @@ const About = () => {
                     }}
                     transition={{ duration: 3, repeat: Infinity }}
                   >
-
+                    Adevărul din spatele promisiunilor
                   </motion.span>
                 </motion.h1>
               </AnimatedSection>
