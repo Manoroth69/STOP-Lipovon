@@ -25,7 +25,7 @@ const RiskCard = ({ icon: Icon, title, description, link, bgColor, iconColor }) 
 );
 
 const RiskCards = () => (
-  <div className="w-full flex justify-center">
+  <div className="w-full flex justify-center px-4">
     <div className="w-full max-w-7xl px-4">
       <Carousel>
         <RiskCard

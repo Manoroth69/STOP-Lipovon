@@ -1,13 +1,45 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import { Tab } from '@headlessui/react'
 import RiskCards from './RiskCards'
-import { Button } from '@/components/ui/Button'
-import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { cn } from '@/lib/utils'
+import ContactEmail from "@/components/ContactEmail";
+
+const testimoniale = [
+  {
+    id: 1,
+    text: '„Toată viața am fost complexată din cauza greutății mele... Nu voiam să mai aud că sunt grasă.” — Cristina Gheorghe',
+  },
+  {
+    id: 2,
+    text: '„Un medicament trebuie autorizat doar dacă beneficiile depășesc riscurile... În special, riscurile cardiovasculare sunt foarte importante.” — Ion Fulga',
+  },
+  {
+    id: 3,
+    text: '„Am zis că mor. N-am putut să iau pastilele decât o săptămână... depresie, anxietate, bătăi de inimă rapide.” — Anonim',
+  },
+]
+
+const surse = [
+  {
+    text: 'Adevărul – Pastila de slăbit interzisă în UE, dar vândută online',
+    href: 'https://adevarul.ro/stiri-interne/societate/pastila-de-slabit-interzisa-in-ue-noua-senzatie-2446823.html',
+  },
+  {
+    text: 'Recorder – Lipovon, pastila promovată pe TikTok care poate duce la moarte subită',
+    href: 'https://recorder.ro/noua-senzatie-de-pe-tiktok-lipovon-pastila-de-slabit-cu-risc-de-moarte-subita/',
+  },
+  {
+    text: 'TikTok – Reportaj video despre Lipovon',
+    href: 'https://www.tiktok.com/@recorder.ro/video/7509475880343833878',
+  },
+]
 
 const Risks = () => {
   return (
     <>
-      {/* 🔍 SEO META */}
+      {/* SEO META */}
       <Helmet>
         <title>Riscurile administrării Lipovon | StopLipovon</title>
         <meta
@@ -15,7 +47,7 @@ const Risks = () => {
           content="Află ce riști dacă folosești Lipovon: de la probleme cardiovasculare până la tulburări psihice. Informații despre sibutramină și efectele adverse."
         />
         <link rel="canonical" href="https://stoplipovon.com/riscuri" />
-        
+
         {/* Open Graph */}
         <meta property="og:title" content="Ce riști dacă folosești Lipovon?" />
         <meta property="og:description" content="Lipovon conține sibutramină, o substanță periculoasă care poate cauza infarct, AVC și probleme psihice grave." />
@@ -61,92 +93,113 @@ const Risks = () => {
         </script>
       </Helmet>
 
-      <section
-        aria-label="Riscurile folosirii Lipovon"
-        className="risks-bg w-full py-30 px-4 z-30"
-      >
-        <div className="container mx-auto flex flex-col items-center space-y-20">
-          {/* Header */}
-          <div className="text-center max-w-[660px] space-y-6">
+      <section className="w-full py-30 px-4 bg-white">
+        <div className="container mx-auto flex flex-col items-center space-y-5">
+          {/* Headline */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-[660px] space-y-6"
+          >
             <h1 className="text-black text-4xl sm:text-5xl font-bold leading-tight">
               Ce riști cu adevărat când iei Lipovon?
             </h1>
             <p className="text-lg text-black">
               Dincolo de promisiunile de slăbire rapidă, Lipovon poate provoca <strong>tulburări psihice</strong> și <strong>afecțiuni cardiovasculare grave</strong>. Produsul este promovat prin <strong>practici înșelătoare</strong> și nu este reglementat de autoritățile medicale din România.
             </p>
-          </div>
+          </motion.div>
 
-          {/* Mărturii și context */}
-          <div className="max-w-3xl space-y-8 text-black text-center">
-            <blockquote className="italic border-l-4 border-gray-400 pl-4 text-lg bg-[#f0a8a3] py-5 px-5 rounded text-left">
-              „Toată viața am fost complexată din cauza greutății mele... Nu voiam să mai aud că sunt grasă.” — <strong>Cristina Gheorghe</strong>, clientă Lipovon.
-            </blockquote>
-            <blockquote className="italic border-l-4 border-gray-400 pl-4 text-lg bg-[#f0a8a3] py-5 px-5 rounded text-left">
-              „Un medicament trebuie autorizat doar dacă beneficiile depășesc riscurile... În special, riscurile cardiovasculare sunt foarte importante.” — <strong>Ion Fulga</strong>, UMF Carol Davila.
-            </blockquote>
-            <blockquote className="italic border-l-4 border-gray-400 pl-4 text-lg bg-[#f0a8a3] py-5 px-5 rounded text-left">
-              „Am zis că mor. N-am putut să iau pastilele decât o săptămână... depresie, anxietate, bătăi de inimă rapide.” — <strong>Anonim</strong>.
-            </blockquote>
-            <p>
-              Lipovon este un produs comercializat online ca supliment pentru slăbit rapid. În multe cazuri, conține <strong>Sibutramină</strong> — o substanță interzisă în Uniunea Europeană din 2010 din cauza riscurilor majore pentru inimă și creier.
-            </p>
-          </div>
+          {/* Tabs */}
+          <Tab.Group>
+            <Tab.List className="flex flex-wrap justify-center gap-4 border-b border-gray-300">
+              {['Riscuri', 'Mărturii', 'Surse și referințe'].map((label, idx) => (
+                <Tab
+                  key={idx}
+                  className={({ selected }) =>
+                    cn(
+                      'py-2 px-4 text-base sm:text-lg rounded-t-lg font-medium focus:outline-none',
+                      selected ? 'bg-black text-white shadow' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    )
+                  }
+                >
+                  {label}
+                </Tab>
+              ))}
+            </Tab.List>
 
-          {/* Introducere la carduri */}
-          <div className="max-w-3xl text-center text-lg text-black">
-            <p>
-              Mai jos găsești o prezentare detaliată a principalelor riscuri asociate cu administrarea Lipovon, bazată pe documentare medicală și mărturii reale – <strong>Reportaj Recorder</strong>.
-            </p>
-          </div>
+            <Tab.Panels className="mt-10 w-full">
+              {/* Riscuri */}
+              <Tab.Panel>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.4 }}
+                  className="w-full max-w-6xl mx-auto flex justify-center"
+                >
+                  <RiskCards />
+                </motion.div>
+              </Tab.Panel>
 
-          {/* 🧠 RiskCards */}
-          <div className="w-full flex justify-center">
-            <RiskCards />
-          </div>
+              {/* Mărturii */}
+              <Tab.Panel>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="space-y-6 max-w-3xl text-black text-left mx-auto"
+                >
+                  {testimoniale.map((item) => (
+                    <blockquote
+                      key={item.id}
+                      className="italic border-l-4 border-gray-400 pl-4 text-lg bg-[#f0a8a3] py-5 px-5 rounded"
+                    >
+                      {item.text}
+                    </blockquote>
+                  ))}
+                </motion.div>
+              </Tab.Panel>
 
-          {/* CTA */}
-          <div className="flex flex-col items-center gap-3 text-center text-black mt-10 max-w-xl">
+              {/* Surse */}
+              <Tab.Panel>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.4 }}
+                  className="text-black text-left text-lg space-y-3 max-w-3xl mx-auto"
+                >
+                  {surse.map((item, index) => (
+                    <div key={index}>
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-black hover:underline"
+                      >
+                        • {item.text}
+                      </a>
+                    </div>
+                  ))}
+                </motion.div>
+              </Tab.Panel>
+            </Tab.Panels>
+          </Tab.Group>
+
+          {/* Call to Action */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center text-black mt-16 max-w-xl space-y-2"
+          >
             <p className="text-lg font-medium">
               Ai trecut printr-o experiență negativă cu Lipovon?
             </p>
             <p className="text-sm italic">
-              Ne poți scrie anonim. Vrem să documentăm cât mai clar impactul acestor produse și să ajutăm la prevenirea altor cazuri.
+            Vrem să documentăm cât mai clar impactul acestor produse și să ajutăm la prevenirea altor cazuri.
             </p>
-            
-            <h2 className="text-base font-semibold text-black mb-2 mt-5">📚 Surse și referințe</h2>
-            <ul className="list-disc list-inside space-y-1">
-              <li>
-                <a
-                  href="https://adevarul.ro/stiri-interne/societate/pastila-de-slabit-interzisa-in-ue-noua-senzatie-2446823.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-black hover:underline"
-                >
-                  Adevărul – Pastila de slăbit interzisă în UE, dar vândută online
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://recorder.ro/noua-senzatie-de-pe-tiktok-lipovon-pastila-de-slabit-cu-risc-de-moarte-subita/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-black hover:underline"
-                >
-                  Recorder – Lipovon, pastila promovată pe TikTok care poate duce la moarte subită
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.tiktok.com/@recorder.ro/video/7509475880343833878"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-black hover:underline"
-                >
-                  TikTok – Reportaj video despre Lipovon
-                </a>
-              </li>
-            </ul>
-          </div>
+            <ContactEmail/>
+          </motion.div>
         </div>
       </section>
     </>

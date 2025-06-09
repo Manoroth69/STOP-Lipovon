@@ -5,6 +5,7 @@ import "keen-slider/keen-slider.min.css"
 import { useEffect, useRef } from "react"
 
 export default function Carousel({ children }) {
+  const sliderContainerRef = useRef(null)
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
     slides: {
@@ -19,9 +20,6 @@ export default function Carousel({ children }) {
         slides: { perView: 3, spacing: 24 },
       },
     },
-    created(slider) {
-      sliderRef.current = slider.container;
-    },
   })
 
   // Auto play
@@ -32,17 +30,32 @@ export default function Carousel({ children }) {
     return () => clearInterval(interval)
   }, [])
 
+  // ✅ Forțăm update când slider devine vizibil (ex: după schimbarea tabului)
+  useEffect(() => {
+    const observer = new ResizeObserver(() => {
+      instanceRef.current?.update()
+    })
+
+    if (sliderContainerRef.current) {
+      observer.observe(sliderContainerRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <div className="relative">
+    <div ref={sliderContainerRef} className="relative w-full">
       <div ref={sliderRef} className="keen-slider w-full">
         {children.map((child, index) => (
-          <div className="keen-slider__slide p-2" key={index}>
+          <div
+            key={index}
+            className="keen-slider__slide p-2"
+            style={{ minWidth: "320px" }} // ✅ carduri decente și consistente
+          >
             {child}
           </div>
         ))}
       </div>
-
-      
     </div>
   )
 }
