@@ -17,7 +17,7 @@ const About = () => {
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-purple-800 relative overflow-hidden">
       {/* SEO Metadata */}
       <Helmet>
-        <title>Stop Lipovon – Adevărul despre pastila de slăbit</title>
+        <title>Stop Lipovon – Adevărul despre pastila de slabit </title>
         <meta name="description" content="Află adevărul despre Lipovon – o inițiativă publică ce demască suplimentele periculoase și marketingul înșelător." />
         <meta name="keywords" content="Lipovon, pastile de slăbit, efecte secundare, adevărul, sănătate, informare, StopLipovon" />
         <meta name="author" content="StopLipovon" />
@@ -38,10 +38,10 @@ const About = () => {
       </Helmet>
 
       {/* Floating Background */}
-      
+
 
       {/* Parallax Layer */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 opacity-20"
         style={{ y: backgroundY }}
       >
@@ -51,50 +51,50 @@ const About = () => {
         <div className="absolute   bottom-32 left-1/3 w-40 h-40 bg-indigo-400/8 rounded-full blur-2xl animate-float-fast" />
       </motion.div>
 
-     
+
 
       {/* Main Content */}
       <div className="relative z-0">
         {/* Hero */}
         <section className="container min-h-screen mx-auto flex items-center justify-center overflow-hidden py-30">
-         
+
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <AnimatedSection delay={0.2}>
-                <motion.h1 
+                <motion.h1
                   className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                 >
                   Stop Lipovon –{' '}
-                  <motion.span 
+                  <motion.span
                     className="bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent"
-                    animate={{ 
+                    animate={{
                       backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                     }}
                     transition={{ duration: 3, repeat: Infinity }}
                   >
-                    Adevărul din spatele promisiunilor
+
                   </motion.span>
                 </motion.h1>
               </AnimatedSection>
 
               <AnimatedSection delay={0.4}>
-                <motion.p 
+                <motion.p
                   className="text-lg text-white/90 mb-8 leading-relaxed"
                   whileInView={{ opacity: [0, 1], y: [30, 0] }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.5 }}
                 >
-                  Suntem o inițiativă de informare publică, fără scop comercial, 
-                  care documentează efectele reale ale pastilei Lipovon și pericolele 
+                  Suntem o inițiativă de informare publică, fără scop comercial,
+                  care documentează efectele reale ale pastilei Lipovon și pericolele
                   marketingului înșelător.
                 </motion.p>
               </AnimatedSection>
 
               <AnimatedSection delay={0.6}>
-                <motion.div 
+                <motion.div
                   className="flex flex-wrap gap-4"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -102,20 +102,20 @@ const About = () => {
                 >
                   <SparkleEffect>
                     <Link to="/ajutor">
-                    <Button 
-                      size="lg" 
+                    <Button
+                      size="lg"
                       className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-0 shadow-2xl animate-pulse-glow"
                     >
                       Raportează Efecte
                     </Button>
                     </Link>
                   </SparkleEffect>
-                  
+
                   <SparkleEffect>
                      <Link to="/donatii">
-                    <Button 
-                      variant="outline" 
-                      size="lg" 
+                    <Button
+                      variant="outline"
+                      size="lg"
                       className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
                     >
                       Susține
@@ -126,7 +126,7 @@ const About = () => {
               </AnimatedSection>
 {/* Links */}
          <AnimatedSection delay={0.8}>
-  <motion.div 
+  <motion.div
     className="flex space-x-6 mt-12 z-20"
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
@@ -140,8 +140,8 @@ const About = () => {
     ].map(({ Icon, delay, url }, index) => (
       <motion.div
         key={index}
-        whileHover={{ 
-          scale: 1.3, 
+        whileHover={{
+          scale: 1.3,
           rotate: 15,
           boxShadow: '0 0 20px rgba(255, 255, 255, 0.3)'
         }}
@@ -171,7 +171,7 @@ const About = () => {
               <AnimatedSection delay={0.5} direction="left">
                 <motion.div
                   className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 shadow-2xl relative overflow-hidden"
-                  whileHover={{ 
+                  whileHover={{
                     boxShadow: '0 25px 50px rgba(0, 0, 0, 0.3)',
                     scale: 1.02
                   }}
@@ -201,7 +201,7 @@ const About = () => {
           </div>
         </section>
 
-        
+
       </div>
     </div>
   );
