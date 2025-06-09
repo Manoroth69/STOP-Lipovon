@@ -14,7 +14,7 @@ const About = () => {
   const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-purple-800 relative overflow-hidden">
+    <div className=" bg-gradient-to-br from-purple-900 via-blue-900 to-purple-800 relative overflow-hidden">
       {/* SEO Metadata */}
       <Helmet>
         <title>Stop Lipovon – Adevărul despre pastila de slabit </title>
@@ -54,12 +54,11 @@ const About = () => {
 
 
       {/* Main Content */}
-      <div className="relative z-0">
+      <div className="relative container mx-auto px-4 py-24 md:py-40">
         {/* Hero */}
-        <section className="container min-h-screen mx-auto flex items-center justify-center overflow-hidden py-30">
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+        <section className="">
+          <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-30 lg:gap-20 ">
+            <div className="space-y-15 max-w-2xl lg:max-w-xxl ">
               <AnimatedSection delay={0.2}>
                 <motion.h1
                   className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
@@ -167,7 +166,7 @@ const About = () => {
             </div>
 
             {/* FAQ */}
-            <div className="relative">
+            <div className="relative flex-1/2 ">
               <AnimatedSection delay={0.5} direction="left">
                 <motion.div
                   className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 shadow-2xl relative overflow-hidden"

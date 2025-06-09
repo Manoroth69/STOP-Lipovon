@@ -55,7 +55,7 @@ export const Hero = () => {
   ];
 
   return (
-    <section className="relative flex items-center justify-center overflow-hidden min-h-screen">
+    <section className="relative flex items-center justify-center overflow-hidden py-24 md:py-40">
       <div className="container mx-auto px-4">
       <Helmet>
         <title>Stop Lipovon – Adevărul despre acest „supliment”</title>
@@ -90,17 +90,18 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent"></div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+            <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-30 lg:gap-0">
 
               {/* Hero text */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                className="space-y-8"
+                className="space-y-15 max-w-2xl lg:max-w-xxl "
               >
-                <h1 className="text-4xl lg:text-5xl font-bold text-slate-800 leading-tight">
+                <div  className="space-y-7  ">
+                <h1 className="text-4xl lg:text-6xl font-bold text-slate-800 leading-tight">
                   <span className="bg-gradient-to-r from-slate-800 via-blue-800 to-purple-800 bg-clip-text text-transparent">
                     Lipovon
                   </span>{" "}
@@ -119,7 +120,7 @@ export const Hero = () => {
                     Nu te baza pe reclame. Consultă un medic sau o persoană de încredere înainte de a consuma Lipovon.
                   </p>
                 </div>
-
+</div>
                 <div className="flex sm:flex-row gap-4">
                   <Link to="/riscuri">
                     <Button
@@ -214,7 +215,7 @@ export const Hero = () => {
               </motion.div>
 
             </div>
-          </div>
+
         </div>
       </div>
       </div>
