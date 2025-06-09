@@ -93,7 +93,7 @@ const Risks = () => {
         </script>
       </Helmet>
 
-      <section className="w-full py-30 px-4 bg-white">
+      <section className="w-full py-30 px-4 bg-white overflow-x-hidden">
         <div className="container mx-auto flex flex-col items-center space-y-5">
           {/* Headline */}
           <motion.div
