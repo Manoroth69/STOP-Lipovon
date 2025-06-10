@@ -32,25 +32,25 @@ export const Hero = () => {
       text: "Interzis Internațional",
       position: "top-left",
       type: "error",
-      url: "https://www.ema.europa.eu/en/medicines/human/referrals/sibutramine"
+      url: "https://adevarul.ro/stiri-interne/societate/pastila-de-slabit-interzisa-in-ue-noua-senzatie-2446823.html"
     },
     {
       text: "Risc Cardiac",
       position: "top-right",
       type: "warning",
-      url: "https://www.ahajournals.org/doi/full/10.1161/01.cir.0000113019.46326.6c"
+      url: "https://www.ebihoreanul.ro/stiri/pastile-de-slabit-cu-risc-de-infarct-suplimentul-lipovon-cu-substante-interzise-promovat-masiv-pe-tiktok-si-vandut-pe-internet-in-romania-194276.html"
     },
     {
       text: "Tensiune Crescută!",
       position: "bottom-left",
       type: "caution",
-      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2918216/"
+      url: "https://hotnews.ro/recorder-pastile-de-slabit-virale-pe-internet-cu-risc-de-moarte-subita-contin-un-drog-din-familia-amfetaminelor-1989192"
     },
     {
       text: "Fii în siguranță!",
       position: "bottom-right",
       type: "success",
-      url: "https://www.who.int/news-room/fact-sheets/detail/healthy-diet"
+      url: "https://www.youtube.com/watch?v=8cvIe_YuG5g"
     },
   ];
 

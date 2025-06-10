@@ -45,7 +45,7 @@ const LipovonWarning = () => (
 
     {/* 🔒 CONȚINUT PAGINĂ */}
     <section
-      className="bg-[#fff] px-4 py-30 flex items-center justify-center min-h-screen"
+      className="bg-[#fff] px-4 py-30 flex items-center justify-center "
       aria-label="Cum să te protejezi de capcana Lipovon"
     >
       <div className="container">

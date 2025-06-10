@@ -9,15 +9,27 @@ import ContactEmail from "@/components/ContactEmail";
 const testimoniale = [
   {
     id: 1,
-    text: '„Toată viața am fost complexată din cauza greutății mele... Nu voiam să mai aud că sunt grasă.” — Cristina Gheorghe',
+    text: (
+      <>
+        „Toată viața am fost complexată din cauza greutății mele... Nu voiam să mai aud că sunt grasă.” — <strong>Cristina Gheorghe</strong>
+      </>
+    ),
   },
   {
     id: 2,
-    text: '„Un medicament trebuie autorizat doar dacă beneficiile depășesc riscurile... În special, riscurile cardiovasculare sunt foarte importante.” — Ion Fulga',
+    text: (
+       <>
+    „Un medicament trebuie autorizat doar dacă beneficiile depășesc riscurile... În special, riscurile cardiovasculare sunt foarte importante.” — <strong>Ion Fulga - Sef de catedră și prorector la UMF „Carol Davila.”</strong>
+    </>
+    ),
   },
   {
     id: 3,
-    text: '„Am zis că mor. N-am putut să iau pastilele decât o săptămână... depresie, anxietate, bătăi de inimă rapide.” — Anonim',
+    text:
+  (
+    <>„Am zis că mor. N-am putut să iau pastilele decât o săptămână... depresie, anxietate, bătăi de inimă rapide.” — <strong>Anonim.</strong>
+  </>
+  )
   },
 ]
 
@@ -93,7 +105,7 @@ const Risks = () => {
         </script>
       </Helmet>
 
-      <section className="w-full py-30 px-4 bg-white overflow-x-hidden">
+      <section className="w-full pt-30 px-4 bg-white overflow-x-hidden">
         <div className="container mx-auto flex flex-col items-center space-y-5">
           {/* Headline */}
           <motion.div

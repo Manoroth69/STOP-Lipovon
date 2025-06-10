@@ -27,7 +27,7 @@ const About = () => {
       content="Lipovon, pastile de slăbit, efecte secundare, adevărul, sănătate, informare, StopLipovon"
     />
     <meta name="author" content="StopLipovon" />
-    <link rel="canonical" href="https://stoplipovon.ro/" />
+    <link rel="canonical" href="https://stoplipovon.com/" />
 
     {/* Open Graph */}
     <meta property="og:title" content="Stop Lipovon – Adevărul despre pastila de slăbit" />
@@ -35,9 +35,9 @@ const About = () => {
       property="og:description"
       content="Suntem o inițiativă publică ce documentează efectele reale ale pastilei Lipovon și riscurile consumului fără informare."
     />
-    <meta property="og:url" content="https://stoplipovon.ro/" />
+    <meta property="og:url" content="https://stoplipovon.com/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://stoplipovon.ro/og-image.jpg" />
+    <meta property="og:image" content="https://stoplipovon.com/og-image.jpg" />
 
     {/* Twitter */}
     <meta name="twitter:card" content="summary_large_image" />
@@ -46,7 +46,7 @@ const About = () => {
       name="twitter:description"
       content="Demascăm suplimentele periculoase. Citește și informează-te despre efectele reale ale Lipovon."
     />
-    <meta name="twitter:image" content="https://stoplipovon.ro/og-image.jpg" />
+    <meta name="twitter:image" content="https://stoplipovon.com/og-image.jpg" />
   </Helmet>
 
   {/* Parallax Background */}
@@ -131,36 +131,41 @@ const About = () => {
           </motion.div>
         </AnimatedSection>
 
-        <AnimatedSection delay={0.8}>
-          <motion.div
-            className="flex items-center gap-5"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
+      <AnimatedSection delay={0.8}>
+  <motion.div
+    className="flex items-center gap-5"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.8, delay: 1 }}
+  >
+    {[
+      { Icon: FaFacebookF, url: "https://www.facebook.com/profile.php?id=61576984151946" },
+      { Icon: FaInstagram, url: "https://instagram.com/stoplipovon" },
+      { Icon: FaTwitter, url: "https://twitter.com/stoplipovon" },
+      { Icon: SiTiktok, url: "https://tiktok.com/@stoplipovon" }
+    ].map(({ Icon, url }, index) => (
+      <motion.div
+        key={index}
+        whileHover={{ scale: 1.3, rotate: 15 }}
+        whileTap={{ scale: 0.9 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.2 + index * 0.2, duration: 0.5 }}
+      >
+        <SparkleEffect>
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm border border-white/20"
           >
-            {[FaFacebookF, FaInstagram, FaTwitter, SiTiktok].map((Icon, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.3, rotate: 15 }}
-                whileTap={{ scale: 0.9 }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2 + index * 0.2, duration: 0.5 }}
-              >
-                <SparkleEffect>
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm border border-white/20"
-                  >
-                    <Icon className="w-6 h-6 text-white" />
-                  </a>
-                </SparkleEffect>
-              </motion.div>
-            ))}
-          </motion.div>
-        </AnimatedSection>
+            <Icon className="w-6 h-6 text-white" />
+          </a>
+        </SparkleEffect>
+      </motion.div>
+    ))}
+  </motion.div>
+</AnimatedSection>
       </motion.div>
 
       {/* Right Column – FAQ */}
