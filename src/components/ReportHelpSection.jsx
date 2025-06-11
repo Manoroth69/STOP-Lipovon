@@ -32,7 +32,7 @@ const ReportHelpSection = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
-      <section className="bg-[#D1F2FA] py-20 px-4 md:px-8 text-slate-800">
+      <section className="bg-[#D1F2FA] py-30 px-4 md:px-8 text-slate-800">
         <div className="max-w-7xl mx-auto flex flex-col items-center gap-10">
           <motion.div
             initial="hidden"

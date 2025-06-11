@@ -19,11 +19,11 @@ const LipovonWarning = () => (
         name="description"
         content="Învață cum să recunoști și să eviți pericolele asociate cu Lipovon. Sfaturi utile pentru protecția ta și a celor dragi."
       />
-      <link rel="canonical" href="https://stoplipovon.ro/protejeaza-te" />
+      <link rel="canonical" href="https://stoplipovon.com/protejeaza-te" />
       <meta property="og:title" content="Cum să te protejezi de capcana Lipovon" />
       <meta property="og:description" content="Află cum să identifici produsele periculoase precum Lipovon și cum să te informezi corect." />
-      <meta property="og:url" content="https://stoplipovon.ro/protejeaza-te" />
-      <meta property="og:image" content="https://stoplipovon.ro/assets/og-protect.jpg" />
+      <meta property="og:url" content="https://stoplipovon.com/protejeaza-te" />
+      <meta property="og:image" content="https://stoplipovon.com/assets/og-protect.jpg" />
       <meta name="twitter:card" content="summary_large_image" />
 
       {/* ✅ JSON-LD STRUCTURED DATA */}

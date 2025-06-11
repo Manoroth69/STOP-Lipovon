@@ -38,42 +38,68 @@ export const Header = () => {
   return (
     <>
       <Helmet>
-        <title>Stop Lipovon - Află Riscurile</title>
-        <meta
-          name="description"
-          content="StopLipovon.com te informează despre riscurile produsului Lipovon. Protejează-ți sănătatea și informează-te corect."
-        />
-        <link rel="canonical" href="https://stoplipovon.com/" />
+  <title>Stop Lipovon - Află Riscurile și Cum să te Protejezi</title>
+  <meta
+    name="description"
+    content="StopLipovon.com - Informare completă despre Lipovon, riscurile lui și metode de protecție. Informează-te corect și protejează-ți sănătatea acum!"
+  />
+  <link rel="canonical" href="https://stoplipovon.com/" />
 
-        {/* Open Graph */}
-        <meta property="og:title" content="Stop Lipovon" />
-        <meta
-          property="og:description"
-          content="Află adevărul despre Lipovon. Informează-te corect și protejează-ți sănătatea."
-        />
-        <meta property="og:url" content="https://stoplipovon.com/" />
-        <meta property="og:image" content="https://stoplipovon.com/og-image.jpg" />
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Stop Lipovon - Află Riscurile și Cum să te Protejezi" />
+  <meta
+    property="og:description"
+    content="Află adevărul despre Lipovon și cum să te protejezi. StopLipovon.com - sursa ta de informare corectă și sigură."
+  />
+  <meta property="og:url" content="https://stoplipovon.com/" />
+  <meta property="og:image" content="https://stoplipovon.com/og-image.jpg" />
+  <meta property="og:image:alt" content="Logo Stop Lipovon" />
 
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Stop Lipovon" />
-        <meta
-          name="twitter:description"
-          content="Informează-te corect despre Lipovon și riscurile asociate. Protejează-ți sănătatea."
-        />
-        <meta name="twitter:image" content="https://stoplipovon.com/og-image.jpg" />
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stop Lipovon - Află Riscurile și Cum să te Protejezi" />
+  <meta
+    name="twitter:description"
+    content="Informează-te corect despre Lipovon și riscurile sale. Protejează-ți sănătatea cu StopLipovon.com."
+  />
+  <meta name="twitter:image" content="https://stoplipovon.com/og-image.jpg" />
+  <meta name="twitter:image:alt" content="Logo Stop Lipovon" />
+  <meta name="twitter:site" content="@stoplipovon" />
 
-        {/* JSON-LD Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Stop Lipovon",
-            url: "https://stoplipovon.com",
-            logo: "https://stoplipovon.com/logo.png",
-          })}
-        </script>
-      </Helmet>
+  {/* JSON-LD Structured Data */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Stop Lipovon",
+          "url": "https://stoplipovon.com",
+          "logo": "https://stoplipovon.com/logo.png",
+          "sameAs": [
+            "https://facebook.com/stoplipovon",
+            "https://twitter.com/stoplipovon",
+            "https://instagram.com/stoplipovon"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "url": "https://stoplipovon.com",
+          "name": "Stop Lipovon",
+          "publisher": {
+            "@id": "https://stoplipovon.com/#organization"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://stoplipovon.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    })}
+  </script>
+</Helmet>
 
       <header
   className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${

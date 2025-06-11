@@ -142,7 +142,7 @@ const About = () => {
       { Icon: FaFacebookF, url: "https://www.facebook.com/profile.php?id=61576984151946" },
       { Icon: FaInstagram, url: "https://instagram.com/stoplipovon" },
       { Icon: FaTwitter, url: "https://twitter.com/stoplipovon" },
-      { Icon: SiTiktok, url: "https://tiktok.com/@stoplipovon" }
+      { Icon: SiTiktok, url: "https://www.tiktok.com/@404cris" }
     ].map(({ Icon, url }, index) => (
       <motion.div
         key={index}
