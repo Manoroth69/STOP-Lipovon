@@ -47,6 +47,19 @@ const surse = [
     text: 'TikTok – Reportaj video despre Lipovon',
     href: 'https://www.tiktok.com/@recorder.ro/video/7509475880343833878',
   },
+  {
+    text: 'Click – „Pastila-minune” care te îmbolnăvește.',
+    href: 'https://click.ro/actualitate/fapt-divers/pastila-minune-care-te-imbolnaveste-mii-de-2446799.html',
+  },
+   {
+    text: 'RomaniaTV – „Pastila-minune” care te îmbolnăvește.',
+    href: 'https://www.romaniatv.net/mare-atentie-la-lipovon-pastila-de-slabit-care-a-devenit-virala-pe-tiktok-specialistii-spun-ca-exista-risc-de-moarte-subita_8957509.html',
+  },
+   {
+    text: 'BZI.ro – „Pastila-minune” care te îmbolnăvește.',
+    href: 'https://www.bzi.ro/risc-de-moarte-subita-din-cauza-unei-pastile-de-slabit-ce-spune-ministrul-sanatatii-5271268',
+  },
+
 ]
 
 const Risks = () => {
