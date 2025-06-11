@@ -5,6 +5,7 @@ import RiskCards from './RiskCards'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import ContactEmail from "@/components/ContactEmail";
+import ceristi from '../assets/ceristi.png';
 
 const testimoniale = [
   {
@@ -99,14 +100,16 @@ const Risks = () => {
               "@type": "WebPage",
               "@id": "https://stoplipovon.com/riscuri"
             },
-            "datePublished": "2024-06-01",
-            "dateModified": "2024-06-01"
+            "datePublished": "2025-06-01",
+            "dateModified": "2025-06-01"
           })}
         </script>
       </Helmet>
 
-      <section className="w-full pt-30 px-4 bg-white overflow-x-hidden">
-        <div className="container mx-auto flex flex-col items-center space-y-5">
+      <section
+  className={`w-full py-30 px-4 bg-gradient-to-r from-red-100 via-red-50 to-white overflow-x-hidden bg-[url('${ceristi}')] bg-cover bg-center`}
+>
+        <div className="container mx-auto flex flex-col items-center space-y-20">
           {/* Headline */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}

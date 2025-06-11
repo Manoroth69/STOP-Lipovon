@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { AlertTriangle, AlertCircle, Info, CheckCircle, HelpCircle, Share2 } from "lucide-react";
 import { FloatingPills } from "./FloatingPills";
 import { ParticleBackground } from "./ParticleBackground";
-import pill from '../assets/pill.webp';
+import pill2 from '../assets/pill2.webp';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
 import { Helmet } from 'react-helmet-async';
@@ -55,9 +55,19 @@ export const Hero = () => {
   ];
 
   return (
+
+
      <section
     className="relative flex items-center justify-center overflow-x-hidden overflow-y-visible py-24 md:py-40 min-h-[70vh] w-full"
   >
+    {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse delay-1000"></div>
+        <div className="absolute -bottom-32 left-20 w-72 h-72 bg-indigo-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse delay-500"></div>
+      </div>
+
+
     <Helmet>
       <title>Stop Lipovon – Adevărul despre acest „supliment”</title>
       <meta
@@ -156,7 +166,7 @@ export const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
-          className="relative flex items-center justify-center mt-12 lg:mt-0"
+          className="relative flex items-center justify-center lg:mt-0"
         >
           <div className="relative w-full max-w-md mx-auto">
             <motion.div
@@ -167,12 +177,12 @@ export const Hero = () => {
               transition={{ type: 'spring', stiffness: 300 }}
             >
               <img
-                src={pill}
+                src={pill2}
                 alt="Cutie Lipovon și avertisment despre Sibutramină"
                 loading="lazy"
-                width={400}
-                height={400}
-                className="z-10 drop-shadow-xl rounded-3xl"
+                width={600}
+                height={600}
+                className="z-10 drop-shadow-xl rounded-3xl opacity-60"
               />
             </motion.div>
 

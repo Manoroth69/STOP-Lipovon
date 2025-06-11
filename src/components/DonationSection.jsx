@@ -1,16 +1,59 @@
 import React from "react";
-import { Helmet } from "react-helmet-async"; // pentru meta SEO
-import { SiStripe } from "react-icons/si";
-import { FaPaypal } from "react-icons/fa";
-import { SiRevolut } from "react-icons/si";
+import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
+import { SiStripe, SiRevolut } from "react-icons/si";
 import { BiCoffee } from "react-icons/bi";
 import Coffee from "../assets/Coffee.webp";
 
-
 const DonationSection = () => {
+  const donationMethods = [
+    {
+      id: "stripe",
+      name: "Donează cu Stripe",
+      icon: <SiStripe className="text-2xl" />,
+      color: "bg-purple-600 hover:bg-purple-700 text-white",
+      url: "https://donate.stripe.com/4gM28qfNF3Qx1Gh5qfcQU01"
+    },
+    {
+      id: "revolut",
+      name: "Donează cu Revolut",
+      icon: <SiRevolut className="text-2xl" />,
+      color: "bg-teal-600 hover:bg-teal-700 hover:text-white",
+      url: "https://revolut.me/donatie"
+    },
+    {
+      id: "coffee",
+      name: "Cumpără-mi o cafea!",
+      icon: <BiCoffee className="text-2xl" />,
+      color: "bg-[#ae5304] hover:bg-[#FFEE88] text-white hover:text-black",
+      url: "https://buymeacoffee.com/stoplipovon"
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <>
-      {/* 🔍 SEO Metadata */}
       <Helmet>
         <title>Stop Lipovon – Adevărul despre acest „supliment”</title>
         <meta
@@ -25,82 +68,144 @@ const DonationSection = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
-      {/* 🎯 Conținut */}
-      <section
-        className="relative bg-gradient-to-br bg-[#2a206b] py-30 px-6 md:px-12 text-slate-800 overflow-hidden"
-        aria-label="Donează pentru StopLipovon"
-      >
-        {/* Background animat */}
-        <div
+      <section className="relative bg-gradient-to-br from-[#2a206b] to-[#3a2b8f] py-30 px-6 md:px-12 text-white overflow-hidden">
+        {/* Animated background elements */}
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 0.2 }}
+          transition={{ duration: 8, repeat: Infinity, repeatType: "reverse" }}
+          className="absolute top-0 left-0 w-72 h-72 bg-blue-300 rounded-full mix-blend-overlay filter blur-3xl -z-10"
           aria-hidden="true"
-          className="absolute top-0 left-0 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-pulse -z-10"
         />
-        <div
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1.2, opacity: 0.2 }}
+          transition={{ duration: 10, delay: 2, repeat: Infinity, repeatType: "reverse" }}
+          className="absolute bottom-0 right-0 w-96 h-96 bg-purple-300 rounded-full mix-blend-overlay filter blur-3xl -z-10"
           aria-hidden="true"
-          className="absolute bottom-0 right-0 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-pulse delay-500 -z-10"
         />
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-          {/* Col Stânga */}
-          <div className="flex flex-col  space-y-8 animate-fade-in-up">
-            <header>
-              <h1 className="text-4xl font-bold text-white mb-4">Susține Misiunea Noastră</h1>
-              <p className="text-lg text-white ">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left Column - Content */}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+            className="space-y-8"
+          >
+            <motion.header variants={itemVariants}>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Susține <span className="text-purple-300">Misiunea</span> Noastră
+              </h1>
+              <p className="text-lg md:text-xl text-blue-100 max-w-xl">
                 Ajută-ne să informăm corect și să protejăm comunitatea. Orice donație contează și sprijină eforturile noastre
-                împotriva produselor periculoase. Dacă vrei să ne susții în această campanie de informare, poți dona prin metode sigure. Mulțumim!
+                împotriva produselor periculoase.
               </p>
-            </header>
+            </motion.header>
 
-            <nav aria-label="Modalități de donație">
-              <ul className="flex  flex-wrap gap-5">
-                <li>
+            <motion.nav
+              variants={containerVariants}
+              aria-label="Modalități de donație"
+              className="space-y-6"
+            >
+              {donationMethods.map((method, index) => (
+                <motion.div
+                  key={method.id}
+                  variants={itemVariants}
+                  custom={index + 1}
+                  whileHover={{ y: -3 }}
+                >
                   <a
-                    href="https://donate.stripe.com/4gM28qfNF3Qx1Gh5qfcQU01"
+                    href={method.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-xl shadow-lg transform hover:scale-105 transition"
+                    className={`flex items-center gap-4 ${method.color} text-black font-semibold px-6 py-4 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl`}
                   >
-                     <SiStripe title="Stripe" className="" />
-                    Donează cu Stripe
+                    <span className="bg-white/20 p-2 rounded-lg">
+                      {method.icon}
+                    </span>
+                    <span>{method.name}</span>
                   </a>
-                </li>
-                
-                <li>
-                  <a
-                    href="https://revolut.me/donatie"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 bg-teal-600 hover:bg-teal-700 text-black font-medium px-6 py-3 rounded-xl shadow-lg transform hover:scale-105 transition"
-                  >
-                     <SiRevolut title="Revolut" className="" />
-                    Donează cu Revolut
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://buymeacoffee.com/stoplipovon"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 bg-[#FFDD00]  text-black font-medium px-6 py-3 rounded-xl shadow-lg transform hover:scale-105 transition"
-                  >
-                     <BiCoffee title="Buy Me A Coffee" className="" />
-                    Cumpara-mi o cafea!
-                  </a>
-                </li>
-                <p className="text-xs text-gray-100 mt-4 max-w-xl">
-  Donațiile sunt 100% voluntare și nu presupun niciun schimb de bunuri sau servicii. Susțin dezvoltarea conținutului informativ. Sumele colectate sunt folosite exclusiv pentru susținerea proiectului StopLipovon – mentenanță, hosting și dezvoltare de conținut informativ. 
-  Nu păstrăm datele tale bancare, iar procesarea este realizată de platformele respective (Stripe,Revolut,Cumpără-mi o cafea).
-</p>
-              </ul>
-            </nav>
-          </div>
+                </motion.div>
+              ))}
+            </motion.nav>
 
-          {/* Col Dreapta */}
-          <div className="bg-[#FFF3E0] rounded-3xl shadow-xl p-8 animate-fade-in-up delay-200">
-           <img src={Coffee} alt="Buy me a coffee image" loading="lazy"/>
-           
-            
-          </div>
+            <motion.p
+              variants={itemVariants}
+              className="text-sm text-blue-100 max-w-xl bg-white/10 p-4 rounded-lg"
+            >
+              Donațiile sunt 100% voluntare și nu presupun niciun schimb de bunuri sau servicii.
+              Sumele colectate sunt folosite exclusiv pentru susținerea proiectului StopLipovon –
+              mentenanță, hosting și dezvoltare de conținut informativ.
+            </motion.p>
+          </motion.div>
+
+          {/* Right Column - Visual */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="relative"
+          >
+            <div className="relative bg-gradient-to-br from-[#FFF3E0] to-[#FFE0B2] rounded-3xl shadow-2xl overflow-hidden">
+              <img
+                src={Coffee}
+                alt="Susține proiectul StopLipovon"
+                loading="lazy"
+                className="w-full h-auto object-cover"
+              />
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1 }}
+                className="absolute inset-0 flex items-center justify-center"
+              >
+                <motion.div
+                  animate={{
+                    y: [0, -10, 0],
+                    rotate: [0, 5, -5, 0]
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="bg-white/90 text-purple-900 font-bold px-6 py-3 rounded-full shadow-lg text-lg"
+                >
+                  Mulțumim pentru sprijin! ❤️
+                </motion.div>
+              </motion.div>
+            </div>
+
+            {/* Floating decorative elements */}
+            <motion.div
+              animate={{
+                y: [0, 15, 0],
+                rotate: [0, 5, -5, 0]
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="absolute -top-8 -left-8 bg-yellow-400 w-16 h-16 rounded-full shadow-lg z-10"
+              aria-hidden="true"
+            />
+            <motion.div
+              animate={{
+                y: [0, -20, 0],
+                rotate: [0, 10, -10, 0]
+              }}
+              transition={{
+                duration: 7,
+                delay: 1,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+              className="absolute -bottom-8 -right-8 bg-purple-400 w-20 h-20 rounded-full shadow-lg z-10"
+              aria-hidden="true"
+            />
+          </motion.div>
         </div>
       </section>
     </>

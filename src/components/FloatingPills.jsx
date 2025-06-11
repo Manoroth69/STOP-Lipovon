@@ -12,9 +12,9 @@ export const FloatingPills = () => {
         size: Math.random() * 20 + 10,
         delay: Math.random() * 5,
         color: [
-          "from-blue-400/20 to-purple-400/20",
-          "from-emerald-400/20 to-teal-400/20",
-          "from-pink-400/20 to-red-400/20",
+          "from-blue-300/20 to-purple-300/20",
+          "from-emerald-300/20 to-teal-300/20",
+          "from-pink-300/20 to-red-300/20",
         ][Math.floor(Math.random() * 3)],
       }));
       setPills(newPills);

@@ -104,10 +104,10 @@ export const Header = () => {
       <header
   className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
     isScrolled ? "shadow-lg" : ""
-  } bg-blue-600/90 backdrop-blur-md`}
+  } bg-gradient-to-br from-[#2a206b] to-[#3a2b8f] backdrop-blur-md`}
 >
   <div className="w-full overflow-x-hidden">
-    <div className="max-w-screen-xl mx-auto px-4">
+    <div className="max-w-7xl mx-auto px-4">
       <div className="flex items-center justify-between h-16">
         {/* Logo */}
         <div className="flex items-center space-x-2 group relative">
