@@ -124,9 +124,9 @@ export const Hero = () => {
             <div className="space-y-4">
               <p className="text-slate-600 leading-relaxed text-lg">
                 Promovată ca supliment natural, Lipovon conține{" "}
-                <span className="text-purple-600 font-semibold hover:text-purple-700 transition-colors cursor-pointer">
+                <a href="https://ro.wikipedia.org/wiki/Sibutramin%C4%83" target="_blank" rel="noopener noreferrer" className="text-purple-600 font-semibold hover:text-purple-700 transition-colors cursor-pointer">
                   Sibutramină
-                </span>{" "}
+                </a>
                 – o substanță interzisă în UE din 2010.
               </p>
               <p className="text-xl text-slate-600 leading-relaxed">
